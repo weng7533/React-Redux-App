@@ -10,12 +10,16 @@ const App = (props) => {
   console.log(props)
 
 
+
   return (
     <div className='App'>
+      {!props.gotData && <button onClick={props.fetch}>Get Pic</button>}
+      {!props.gotData && <h2>Click Button To Get NASSA Pic of the day.</h2>}
+
       {props.gotData && <img src={props.data.data.url} />}
-      <div>Click Button To Get NASSA Pic of the day.</div>
-      <h2 id="KittensHeader"></h2>
-      <button onClick={props.fetch}>Get Pic</button>
+
+
+
     </div >
   );
 
